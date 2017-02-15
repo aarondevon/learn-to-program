@@ -7,7 +7,7 @@ while true
   if talk_to_grandma != talk_to_grandma.upcase
     puts "HUH?! SPEAK UP, SONNY!"
   else
-    puts "NO, NOT SINCE 1938!"
+    puts "NO, NOT SINCE #{rand(1920..1957)}!"
     break
   end
 end
