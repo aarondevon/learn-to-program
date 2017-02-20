@@ -5,5 +5,6 @@ def old_school_roman_numerial number
   roman = ''
 
   roman << "M" * (number / 1000)
-
+  roman << "D" * (number % 1000 / 500)
+  
 end
