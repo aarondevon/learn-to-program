@@ -2,15 +2,19 @@
 
 words = ["fish", "snacks", "dog", "pie", "cat", "apple"]
 
-shuffled_words = []
-
-length = words.length
-counter = 0
-while counter < length
-  word = words[rand(0..(words.length - 1))]
-  shuffled_words << word
-  words.delete(word)
-  counter += 1
+def shuffle unshuffled_array
+  recursive_shuffle unshuffled_array, []
 end
 
-puts shuffled_words
+def recursive_shuffle unshuffled_array, shuffled_array
+  if unshuffled_array.length <= 0
+    return shuffled_array
+  end
+  word = unshuffled_array[rand(0..(unshuffled_array.length - 1))]
+  shuffled_array << word
+  unshuffled_array.delete(word)
+
+  recursive_shuffle unshuffled_array, shuffled_array
+end
+
+puts shuffle words
