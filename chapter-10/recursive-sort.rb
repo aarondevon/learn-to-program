@@ -1,11 +1,10 @@
 # create a recursive sort program
 
 words = ["fish", "snacks", "dog", "pie", "cat", "apple"]
-sorted = []
-# def sort unsorted_array, sorted_array
-#   recursive_sort unsorted_array, []
-#
-# end
+
+def sort unsorted_array
+  recursive_sort unsorted_array, []
+end
 
 def recursive_sort unsorted_array, sorted_array
   # word to compare other words against
@@ -25,7 +24,4 @@ def recursive_sort unsorted_array, sorted_array
 
 end
 
-recursive_sort words, sorted
-
-
-p sorted
+puts sort words
